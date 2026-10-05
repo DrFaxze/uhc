@@ -221,7 +221,9 @@ export function trueDamage(victim: Entity, amount: number, source: Entity | unde
 export function push(victim: Entity, x: number, y: number, z: number): void {
   try {
     if (victim.typeId === 'minecraft:player') {
-      victim.applyKnockback({ x, z }, y);
+      // applyKnockback fija la velocidad: se suma a la actual para que sea un empuje como en Java.
+      const v = victim.getVelocity();
+      victim.applyKnockback({ x: v.x + x, z: v.z + z }, (victim.isOnGround ? 0 : v.y) + y);
     } else {
       victim.applyImpulse({ x, y, z });
     }

@@ -39,6 +39,7 @@ const TARGETS = {
   constellation_crystal: [2, 2],
   fear_crystal: [2, 2],
   fear_core: [3, 3],
+  frost_bullet: [0.4, 0.4],
 };
 
 const write = (file, data) => {
