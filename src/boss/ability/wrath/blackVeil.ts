@@ -2,6 +2,7 @@ import { Player } from '@minecraft/server';
 import { C } from '../../../config';
 import { DT } from '../../../core/damage';
 import type { Effect } from '../../../fx/effect';
+import { NS } from '../../../core/world';
 import { V } from '../../../util/vec';
 import type { Ability, Task } from '../../api';
 import type { Brain } from '../../brain';
@@ -66,6 +67,8 @@ class Wall implements Task {
     let any = false;
     for (const seg of this.segments) {
       const age = this.t - seg.born;
+      // Effect.scale() también ensancha el muro: se devuelve el grosor (eje Z del modelo) a 1.
+      if (age === 1) thin(seg.fx);
       if (age === 28 + life) seg.fx.anims('fade').life(16);
       if (age < 28 + life + 16) any = true;
     }
@@ -98,5 +101,13 @@ class Wall implements Task {
 
   cancel(_brain: Brain): void {
     for (const seg of this.segments) seg.fx.discard();
+  }
+}
+
+function thin(fx: Effect): void {
+  try {
+    if (fx.valid) fx.entity.setProperty(`${NS}:sz`, 1);
+  } catch {
+    /* descargada */
   }
 }

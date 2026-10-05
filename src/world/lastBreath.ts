@@ -174,6 +174,11 @@ export function tickLastBreath(): void {
   if (age > MAX && age < EXPLODE && age % 20 === 0) top(c, 'mob.warden.heartbeat', 12, 1);
   if (age >= FORM && age < EXPLODE) pull(age, c);
   if (age === EXPLODE) explode(r, c);
+  if (age === EXPLODE + 50 && !deathSent.has(r.dragon)) {
+    // Como en Java: la muerte vanilla (portal, huevo, experiencia) llega ~2,5 s después de la explosión.
+    deathSent.add(r.dragon);
+    r.brain?.finishDeath();
+  }
   if (age === ORBIT) r.moon?.anims('orbit');
   if (age === VANISH) r.moon?.anims('vanish').life(40);
   if (age >= END) {
@@ -275,6 +280,8 @@ function explode(r: Run, c: V): void {
   }
 }
 
+const deathSent = new Set<string>();
+
 function finish(r: Run): void {
   r.moon?.remove();
   r.rim?.remove();
@@ -294,5 +301,6 @@ function finish(r: Run): void {
       brain = null;
     }
   }
-  if (brain) brain.finishDeath();
+  if (brain && !deathSent.has(r.dragon)) brain.finishDeath();
+  deathSent.add(r.dragon);
 }

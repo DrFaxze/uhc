@@ -1309,6 +1309,8 @@ export class Brain {
     this.chargeRings?.remove();
     this.stateV = 'NONE';
     this.setHealth(1);
+    // Oculto y apartado por encima de la Luna Negra mientras dura el Último Aliento.
+    this.flight.place(this.center().add(0, 90, 0), this.flight.yaw);
     this.save();
     DEATH_HOOK.begin?.(this);
   }
@@ -1316,7 +1318,7 @@ export class Brain {
   /** Fin del Último Aliento: muerte vanilla (portal, huevo y experiencia). */
   finishDeath(): void {
     this.allowDeath = true;
-    this.setHidden(false);
+    // Sigue oculto, como en Java (BossDragonRenderer no dibuja al dragón muerto).
     this.flight.place(this.center().add(0, 20, 0), this.flight.yaw);
     this.teleportDragon();
     try {
