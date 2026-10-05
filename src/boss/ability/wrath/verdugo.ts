@@ -1,4 +1,4 @@
-import type { Entity } from '@minecraft/server';
+import { Entity, Player } from '@minecraft/server';
 import { C } from '../../../config';
 import { DT } from '../../../core/damage';
 import { alive, particle, PART } from '../../../core/world';
@@ -153,7 +153,7 @@ function riding(e: Entity): boolean {
 
 function name(e: Entity): string {
   try {
-    return e.nameTag || e.typeId;
+    return e instanceof Player ? e.name : e.nameTag || e.typeId;
   } catch {
     return '?';
   }

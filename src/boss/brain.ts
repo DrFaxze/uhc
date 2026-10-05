@@ -485,7 +485,7 @@ export class Brain {
     let near = false;
     if (!near) {
       for (const e of this.owned) {
-        if (e instanceof Effect && e.valid && (e.model === 'constellation_crystal' || e.model === 'fear_crystal') && e.position().distanceToSqr(p) < 32 * 32) {
+        if (e instanceof Effect && e.valid && (e.model === 'constellation_crystal' || e.model === 'fear_crystal' || e.model === 'fear_core') && e.position().distanceToSqr(p) < 32 * 32) {
           near = true;
           if (this.tickCount % 4 === 0) beam(e.position(), this.head(), COLORS.pink);
           break;
