@@ -483,11 +483,6 @@ export class Brain {
     // Los cristales de la Constelación (y los del miedo) curan como un cristal del End más el bonus.
     const p = this.flight.pos;
     let near = false;
-    try {
-      near = end().getEntities({ location: p, maxDistance: 32, families: ['improvedragon_heal_crystal'] }).length > 0;
-    } catch {
-      near = false;
-    }
     if (!near) {
       for (const e of this.owned) {
         if (e instanceof Effect && e.valid && (e.model === 'constellation_crystal' || e.model === 'fear_crystal') && e.position().distanceToSqr(p) < 32 * 32) {

@@ -2,6 +2,7 @@ import {
   Entity,
   EntityDamageCause,
   EquipmentSlot,
+  InputPermissionCategory,
   Player,
   system,
   world,
@@ -253,8 +254,7 @@ export function registerDamageEvents(): void {
     system.run(() => {
       try {
         if (player.isValid) {
-          player.inputPermissions.setPermissionCategory(8, true);
-          player.inputPermissions.setPermissionCategory(5, true);
+          player.inputPermissions.setPermissionCategory(InputPermissionCategory.Dismount, true);
         }
       } catch {
         /* ignorar */
