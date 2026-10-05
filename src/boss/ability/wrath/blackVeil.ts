@@ -105,9 +105,5 @@ class Wall implements Task {
 }
 
 function thin(fx: Effect): void {
-  try {
-    if (fx.valid) fx.entity.setProperty(`${NS}:sz`, 1);
-  } catch {
-    /* descargada */
-  }
+  fx.scaleZ(1);
 }

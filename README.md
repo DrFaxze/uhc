@@ -67,6 +67,23 @@ Las entidades con el tag `improvedragon_target` cuentan como objetivos (para pro
   parecidas de Bedrock, con menos cantidad (en Bedrock cada partícula es un paquete de red).
 - **Texturas animadas** (`rush_aura`, `veil_fire`, `verdugo_aura`): animadas con `uv_anim`.
 - **Sin archivo de config**: los valores están en `src/config.ts` (mismos nombres que `DragonConfig` de Java).
+- **Proyectiles propios** (Bala congelante, Prisma gélido, proyectiles del Rito, lágrimas): son entidades de efecto
+  que el script mueve y cuyos choques calcula él mismo.
+- **Congelación**: Bedrock no tiene `ticksFrozen`; se usa lentitud, copos de nieve y (Prisma) inmovilización.
+- **Regenerar pilares** (Curación con los 4 cristales llenos): no se puede volver a generar la estructura; se
+  vuelve a poner un cristal del End en lo alto de cada pilar que no lo tenga.
+- **Invocaciones** (Constelación del miedo, Grietas dimensionales): no se puede bajar la vida máxima con la API
+  estable; se fija la vida actual. Sin botín ni experiencia (se borran los objetos y orbes que sueltan al morir).
+  El guardián "montado" en el ahogado le sigue por teleport si no se puede montar de verdad. Los piglins y hoglins
+  de las grietas reciben periódicamente el evento que detiene la zombificación.
+- **Pantalla roja de la Luna de sangre**: niebla roja durante toda la noche carmesí y un fundido rojo al empezar
+  (Bedrock no tiene un velo de color permanente).
+- **Último Aliento**: el dragón queda oculto y apartado; la muerte vanilla (portal, huevo, experiencia) llega
+  ~2,5 s después de la explosión, como en Java. Si se recarga el mundo a mitad, la cronología se reanuda.
+- **Sonidos**: todos vanilla de Bedrock, los más parecidos a los de Java.
+- **Sin probar en el juego**: el port compila y los paquetes se validan, pero no se ha podido probar dentro de
+  Minecraft desde el entorno donde se hizo. Si algo se ve mal orientado (haces, modelos) o no responde, abre una
+  incidencia con `/improvedragon:debug true` activado.
 
 ## Compilar
 

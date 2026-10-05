@@ -43,6 +43,7 @@ export class Effect {
   private aimPitchDeg = 0;
   private scaleV = 1;
   private scaleYV = -1;
+  private scaleZV = -1;
   private lengthV = 0;
   private dyV = 0;
   private dirtyRot = true;
@@ -106,6 +107,12 @@ export class Effect {
   }
   scaleY(sy: number): this {
     this.scaleYV = sy;
+    this.dirtyScale = true;
+    return this;
+  }
+  /** Escala propia en Z (grosor); por defecto la general. */
+  scaleZ(sz: number): this {
+    this.scaleZV = sz;
     this.dirtyScale = true;
     return this;
   }
@@ -264,7 +271,7 @@ export class Effect {
       if (this.dirtyScale) {
         const sx = this.scaleV;
         const sy = this.lengthV > 0 ? this.scaleV : this.scaleYV > 0 ? this.scaleYV : this.scaleV;
-        const sz = this.lengthV > 0 ? this.lengthV / 32 : this.scaleV;
+        const sz = this.lengthV > 0 ? this.lengthV / 32 : this.scaleZV > 0 ? this.scaleZV : this.scaleV;
         this.entity.setProperty(`${NS}:sx`, Math.min(2000, sx));
         this.entity.setProperty(`${NS}:sy`, Math.min(2000, sy));
         this.entity.setProperty(`${NS}:sz`, Math.min(2000, sz));

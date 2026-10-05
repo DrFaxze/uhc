@@ -680,7 +680,10 @@ export const MODELS: Record<string, ModelInfo> = {
    true
   ],
   "additive": false,
-  "target": null
+  "target": [
+   0.4,
+   0.4
+  ]
  },
  "frost_prism": {
   "anims": [
