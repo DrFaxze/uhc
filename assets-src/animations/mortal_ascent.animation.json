@@ -1,0 +1,173 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.mortal_ascent.grab": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.5,
+   "bones": {
+    "ring": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.01,
+        0.01,
+        0.01
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.4": {
+       "post": [
+        1.15,
+        1.15,
+        1.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.5": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "ring2": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.01,
+        0.01,
+        0.01
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.4": {
+       "post": [
+        1.15,
+        1.15,
+        1.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.5": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.mortal_ascent.loop": {
+   "loop": true,
+   "animation_length": 1,
+   "bones": {
+    "ring": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "1.0": [
+       0,
+       360,
+       0
+      ]
+     }
+    },
+    "ring2": {
+     "rotation": {
+      "0.0": [
+       25,
+       0,
+       15
+      ],
+      "1.0": [
+       25,
+       -360,
+       15
+      ]
+     }
+    }
+   }
+  },
+  "animation.mortal_ascent.bite": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.35,
+   "bones": {
+    "ring": {
+     "scale": {
+      "0.0": [
+       0.8,
+       0.8,
+       0.8
+      ],
+      "0.1": [
+       1.2,
+       1.2,
+       1.2
+      ],
+      "0.35": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "ring2": {
+     "scale": {
+      "0.0": [
+       0.8,
+       0.8,
+       0.8
+      ],
+      "0.1": [
+       1.2,
+       1.2,
+       1.2
+      ],
+      "0.35": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.mortal_ascent.release": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.4,
+   "bones": {
+    "ring": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "ring2": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    }
+   }
+  }
+ }
+}

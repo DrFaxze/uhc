@@ -1,0 +1,356 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.rite_crystal.fill0": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.4,
+   "bones": {
+    "fill_0": {
+     "scale": 1
+    },
+    "fill_1": {
+     "scale": 0.01
+    },
+    "fill_2": {
+     "scale": 0.01
+    },
+    "fill_3": {
+     "scale": 0.01
+    },
+    "glow": {
+     "scale": 0.6
+    }
+   }
+  },
+  "animation.rite_crystal.fill1": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.4,
+   "bones": {
+    "fill_0": {
+     "scale": 0.01
+    },
+    "fill_1": {
+     "scale": 1
+    },
+    "fill_2": {
+     "scale": 0.01
+    },
+    "fill_3": {
+     "scale": 0.01
+    },
+    "glow": {
+     "scale": 0.9
+    }
+   }
+  },
+  "animation.rite_crystal.fill2": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.4,
+   "bones": {
+    "fill_0": {
+     "scale": 0.01
+    },
+    "fill_1": {
+     "scale": 0.01
+    },
+    "fill_2": {
+     "scale": 1
+    },
+    "fill_3": {
+     "scale": 0.01
+    },
+    "glow": {
+     "scale": 1.2
+    }
+   }
+  },
+  "animation.rite_crystal.fill3": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.4,
+   "bones": {
+    "fill_0": {
+     "scale": 0.01
+    },
+    "fill_1": {
+     "scale": 0.01
+    },
+    "fill_2": {
+     "scale": 0.01
+    },
+    "fill_3": {
+     "scale": 1
+    },
+    "glow": {
+     "scale": 1.5
+    }
+   }
+  },
+  "animation.rite_crystal.intact": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "crack": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.rite_crystal.hit1": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.3,
+   "bones": {
+    "crack": {
+     "scale": 1
+    },
+    "crystal": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.05": {
+       "pre": [
+        0,
+        0,
+        0
+       ],
+       "post": [
+        2,
+        0,
+        0
+       ]
+      },
+      "0.1": {
+       "pre": [
+        2,
+        0,
+        0
+       ],
+       "post": [
+        -2,
+        1,
+        0
+       ]
+      },
+      "0.15": {
+       "pre": [
+        -2,
+        1,
+        0
+       ],
+       "post": [
+        0,
+        0,
+        0
+       ]
+      }
+     }
+    }
+   }
+  },
+  "animation.rite_crystal.activate": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.6,
+   "bones": {
+    "glow": {
+     "scale": {
+      "0.0": [
+       1.5,
+       1.5,
+       1.5
+      ],
+      "0.15": [
+       3,
+       3,
+       3
+      ],
+      "0.6": [
+       1.5,
+       1.5,
+       1.5
+      ]
+     }
+    },
+    "orbit": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.3": [
+       1.6,
+       1,
+       1.6
+      ],
+      "0.6": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.rite_crystal.shatter": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.5,
+   "bones": {
+    "crystal": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.1": [
+       1.3,
+       1.3,
+       1.3
+      ],
+      "0.2": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "glow": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.1": [
+       2.5,
+       2.5,
+       2.5
+      ],
+      "0.5": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "orbit": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "pillar": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "ground": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    }
+   }
+  },
+  "animation.rite_crystal.loop": {
+   "loop": true,
+   "animation_length": 3,
+   "bones": {
+    "crystal": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "3.0": [
+       0,
+       180,
+       0
+      ]
+     },
+     "position": {
+      "0.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.5": {
+       "post": [
+        0,
+        4,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "3.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "orbit": {
+     "rotation": {
+      "0.0": [
+       15,
+       0,
+       0
+      ],
+      "3.0": [
+       15,
+       -360,
+       0
+      ]
+     }
+    },
+    "ground": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "3.0": [
+       0,
+       90,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.blood_rise.rise": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 6,
+   "bones": {
+    "ring": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.1,
+        1,
+        0.1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "2.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "6.0": [
+       1.05,
+       1,
+       1.05
+      ]
+     },
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "6.0": [
+       0,
+       180,
+       0
+      ]
+     }
+    },
+    "beams": {
+     "scale": {
+      "0.0": {
+       "post": [
+        1,
+        0.01,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "3.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "5.0": {
+       "post": [
+        1,
+        1.1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "6.0": [
+       0.3,
+       1.1,
+       0.3
+      ]
+     }
+    },
+    "motes": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "6.0": [
+       0,
+       224,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.constellation_crystal.orbit": {
+   "loop": true,
+   "animation_length": 6,
+   "bones": {
+    "orbit": {
+     "rotation": {
+      "0.0": [
+       15,
+       0,
+       0
+      ],
+      "6.0": [
+       15,
+       360,
+       0
+      ]
+     }
+    },
+    "gem": {
+     "rotation": {
+      "0.0": [
+       0,
+       45,
+       0
+      ],
+      "6.0": [
+       0,
+       -315,
+       0
+      ]
+     },
+     "position": {
+      "0.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "3.0": {
+       "post": [
+        0,
+        3,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "6.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "holder": {
+     "position": {
+      "0.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "3.0": {
+       "post": [
+        0,
+        -2,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "6.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    }
+   }
+  },
+  "animation.constellation_crystal.link": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.5,
+   "bones": {
+    "link": {
+     "scale": {
+      "0.0": [
+       0.01,
+       1,
+       1
+      ],
+      "0.5": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.constellation_crystal.detonate": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.3,
+   "bones": {
+    "gem": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.15": [
+       2,
+       2,
+       2
+      ],
+      "0.3": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "cage": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.3": [
+       1.6,
+       1.6,
+       1.6
+      ]
+     }
+    },
+    "orbit": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.3": [
+       3,
+       1,
+       3
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "format_version": "1.10.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "improvedragon:grab_seat",
+   "materials": {
+    "default": "entity_alphatest"
+   },
+   "textures": {
+    "default": "textures/entity/improvedragon/pearl_portal"
+   },
+   "geometry": {
+    "default": "geometry.improvedragon.empty"
+   },
+   "render_controllers": [
+    "controller.render.default"
+   ]
+  }
+ }
+}

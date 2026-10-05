@@ -1,0 +1,489 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.veil_fire",
+    "texture_width": 96,
+    "texture_height": 96,
+    "visible_bounds_width": 4,
+    "visible_bounds_height": 8,
+    "visible_bounds_offset": [
+     0,
+     0,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "crack",
+     "parent": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -24,
+        0.5,
+        -24
+       ],
+       "size": [
+        48,
+        0,
+        48
+       ],
+       "uv": {
+        "up": {
+         "uv": [
+          80,
+          48
+         ],
+         "uv_size": [
+          -48,
+          -48
+         ]
+        },
+        "down": {
+         "uv": [
+          80,
+          48
+         ],
+         "uv_size": [
+          -48,
+          -48
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "flame",
+     "parent": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -16,
+        0,
+        0
+       ],
+       "size": [
+        32,
+        96,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          0,
+          0
+         ],
+         "uv_size": [
+          32,
+          96
+         ]
+        },
+        "south": {
+         "uv": [
+          0,
+          0
+         ],
+         "uv_size": [
+          32,
+          96
+         ]
+        }
+       }
+      },
+      {
+       "origin": [
+        -16,
+        0,
+        0
+       ],
+       "size": [
+        32,
+        96,
+        0
+       ],
+       "pivot": [
+        0,
+        48,
+        0
+       ],
+       "rotation": [
+        0,
+        -90,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          0,
+          0
+         ],
+         "uv_size": [
+          32,
+          96
+         ]
+        },
+        "south": {
+         "uv": [
+          0,
+          0
+         ],
+         "uv_size": [
+          32,
+          96
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "flame_inner",
+     "parent": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      -45,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -9.6,
+        0,
+        0
+       ],
+       "size": [
+        19.2,
+        64,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          0,
+          0
+         ],
+         "uv_size": [
+          32,
+          96
+         ]
+        },
+        "south": {
+         "uv": [
+          0,
+          0
+         ],
+         "uv_size": [
+          32,
+          96
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "smoke",
+     "parent": "root",
+     "pivot": [
+      0,
+      80,
+      0
+     ]
+    },
+    {
+     "name": "smoke_0",
+     "parent": "smoke",
+     "pivot": [
+      0,
+      96,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -12,
+        84,
+        0
+       ],
+       "size": [
+        24,
+        24,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        },
+        "south": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        }
+       }
+      },
+      {
+       "origin": [
+        -12,
+        84,
+        0
+       ],
+       "size": [
+        24,
+        24,
+        0
+       ],
+       "pivot": [
+        0,
+        96,
+        0
+       ],
+       "rotation": [
+        0,
+        -90,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        },
+        "south": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "smoke_1",
+     "parent": "smoke",
+     "pivot": [
+      -10,
+      120,
+      -6
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -22,
+        108,
+        -6
+       ],
+       "size": [
+        24,
+        24,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        },
+        "south": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        }
+       }
+      },
+      {
+       "origin": [
+        -22,
+        108,
+        -6
+       ],
+       "size": [
+        24,
+        24,
+        0
+       ],
+       "pivot": [
+        -10,
+        120,
+        -6
+       ],
+       "rotation": [
+        0,
+        -90,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        },
+        "south": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "smoke_2",
+     "parent": "smoke",
+     "pivot": [
+      8,
+      144,
+      8
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -4,
+        132,
+        8
+       ],
+       "size": [
+        24,
+        24,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        },
+        "south": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        }
+       }
+      },
+      {
+       "origin": [
+        -4,
+        132,
+        8
+       ],
+       "size": [
+        24,
+        24,
+        0
+       ],
+       "pivot": [
+        8,
+        144,
+        8
+       ],
+       "rotation": [
+        0,
+        -90,
+        0
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        },
+        "south": {
+         "uv": [
+          32,
+          48
+         ],
+         "uv_size": [
+          32,
+          32
+         ]
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

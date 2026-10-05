@@ -1,0 +1,68 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.death_beam_mark.mark": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 4,
+   "bones": {
+    "ground": {
+     "scale": {
+      "0.0": {
+       "post": [
+        1.6,
+        1,
+        1.6
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "3.6": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "4.0": [
+       0.85,
+       1,
+       0.85
+      ]
+     },
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "4.0": [
+       0,
+       270,
+       0
+      ]
+     }
+    }
+   }
+  },
+  "animation.death_beam_mark.loop": {
+   "loop": true,
+   "animation_length": 1,
+   "bones": {
+    "ground": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "1.0": [
+       0,
+       90,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

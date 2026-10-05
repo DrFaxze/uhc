@@ -1,0 +1,124 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.rapture",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 6,
+    "visible_bounds_height": 6,
+    "visible_bounds_offset": [
+     0,
+     0,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "ring",
+     "parent": "root",
+     "pivot": [
+      0,
+      17.6,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -33.6,
+        17.6,
+        -33.6
+       ],
+       "size": [
+        67.2,
+        0,
+        67.2
+       ],
+       "uv": {
+        "up": {
+         "uv": [
+          64,
+          64
+         ],
+         "uv_size": [
+          -64,
+          -64
+         ]
+        },
+        "down": {
+         "uv": [
+          64,
+          64
+         ],
+         "uv_size": [
+          -64,
+          -64
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "ring2",
+     "parent": "root",
+     "pivot": [
+      0,
+      25.6,
+      0
+     ],
+     "rotation": [
+      -25,
+      0,
+      15
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -27.2,
+        25.6,
+        -27.2
+       ],
+       "size": [
+        54.4,
+        0,
+        54.4
+       ],
+       "uv": {
+        "up": {
+         "uv": [
+          64,
+          64
+         ],
+         "uv_size": [
+          -64,
+          -64
+         ]
+        },
+        "down": {
+         "uv": [
+          64,
+          64
+         ],
+         "uv_size": [
+          -64,
+          -64
+         ]
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

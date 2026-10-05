@@ -1,0 +1,141 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.fear_runes.open": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 2,
+   "bones": {
+    "outer": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.01,
+        1,
+        0.01
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.8": {
+       "post": [
+        1.1,
+        1,
+        1.1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.2": [
+       1,
+       1,
+       1
+      ]
+     },
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "2.0": [
+       0,
+       90,
+       0
+      ]
+     }
+    },
+    "inner": {
+     "scale": {
+      "0.0": [
+       0.01,
+       1,
+       0.01
+      ],
+      "0.6": [
+       0.01,
+       1,
+       0.01
+      ],
+      "1.4": [
+       1,
+       1,
+       1
+      ]
+     },
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "2.0": [
+       0,
+       -180,
+       0
+      ]
+     }
+    },
+    "motes": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "2.0": [
+       0,
+       32,
+       0
+      ]
+     }
+    }
+   }
+  },
+  "animation.fear_runes.loop": {
+   "loop": true,
+   "animation_length": 4,
+   "bones": {
+    "outer": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "4.0": [
+       0,
+       90,
+       0
+      ]
+     }
+    },
+    "inner": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "4.0": [
+       0,
+       -180,
+       0
+      ]
+     }
+    },
+    "motes": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "4.0": [
+       0,
+       32,
+       0
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.enderbeam.fire": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.6,
+   "bones": {
+    "halo": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.15,
+        0.01,
+        0.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.2": {
+       "post": [
+        1.35,
+        1,
+        1.35
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.6": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "tube": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.15,
+        0.01,
+        0.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.2": {
+       "post": [
+        1.35,
+        1,
+        1.35
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.6": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "origin": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.2,
+        0.2,
+        0.2
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.15": {
+       "post": [
+        1.6,
+        1.6,
+        1.6
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.6": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.enderbeam.loop": {
+   "loop": true,
+   "animation_length": 0.6,
+   "bones": {
+    "halo": {
+     "scale": {
+      "0.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.3": {
+       "post": [
+        1.15,
+        1,
+        1.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.6": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "tube": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.15": {
+       "pre": [
+        1,
+        1,
+        1
+       ],
+       "post": [
+        0.85,
+        1,
+        0.85
+       ]
+      },
+      "0.3": {
+       "pre": [
+        0.85,
+        1,
+        0.85
+       ],
+       "post": [
+        1.12,
+        1,
+        1.12
+       ]
+      },
+      "0.45": {
+       "pre": [
+        1.12,
+        1,
+        1.12
+       ],
+       "post": [
+        0.92,
+        1,
+        0.92
+       ]
+      }
+     }
+    },
+    "origin": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.6": [
+       0,
+       0,
+       90
+      ]
+     }
+    },
+    "motes": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.6": [
+       0,
+       0,
+       48
+      ]
+     }
+    }
+   }
+  }
+ }
+}

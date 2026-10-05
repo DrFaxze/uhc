@@ -1,0 +1,51 @@
+{
+ "format_version": "1.10.0",
+ "particle_effect": {
+  "description": {
+   "identifier": "improvedragon:ring_wave",
+   "basic_render_parameters": {
+    "material": "particles_add",
+    "texture": "textures/particle/improvedragon/ring_wave"
+   }
+  },
+  "components": {
+   "minecraft:emitter_rate_instant": {
+    "num_particles": 1
+   },
+   "minecraft:emitter_lifetime_once": {
+    "active_time": 0
+   },
+   "minecraft:emitter_shape_point": {},
+   "minecraft:particle_lifetime_expression": {
+    "max_lifetime": "math.max(0.1, v.life)"
+   },
+   "minecraft:particle_appearance_billboard": {
+    "size": [
+     "v.radius / 0.42 * math.sqrt(math.min(1, v.particle_age / v.particle_lifetime))",
+     "v.radius / 0.42 * math.sqrt(math.min(1, v.particle_age / v.particle_lifetime))"
+    ],
+    "facing_camera_mode": "emitter_transform_xz",
+    "uv": {
+     "texture_width": 128,
+     "texture_height": 128,
+     "uv": [
+      0,
+      0
+     ],
+     "uv_size": [
+      128,
+      128
+     ]
+    }
+   },
+   "minecraft:particle_appearance_tinting": {
+    "color": [
+     "v.color.r",
+     "v.color.g",
+     "v.color.b",
+     "1 - math.pow(v.particle_age / v.particle_lifetime, 3)"
+    ]
+   }
+  }
+ }
+}

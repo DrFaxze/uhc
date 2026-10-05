@@ -1,0 +1,169 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.charge_rings_purple",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 26,
+    "visible_bounds_height": 6,
+    "visible_bounds_offset": [
+     0,
+     0,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "ring_0",
+     "parent": "root",
+     "pivot": [
+      0,
+      32,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -192,
+        32,
+        -192
+       ],
+       "size": [
+        384,
+        0,
+        384
+       ],
+       "uv": {
+        "up": {
+         "uv": [
+          128,
+          128
+         ],
+         "uv_size": [
+          -128,
+          -128
+         ]
+        },
+        "down": {
+         "uv": [
+          128,
+          128
+         ],
+         "uv_size": [
+          -128,
+          -128
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "ring_1",
+     "parent": "root",
+     "pivot": [
+      0,
+      32,
+      0
+     ],
+     "rotation": [
+      -90,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -128,
+        32,
+        -128
+       ],
+       "size": [
+        256,
+        0,
+        256
+       ],
+       "uv": {
+        "up": {
+         "uv": [
+          128,
+          128
+         ],
+         "uv_size": [
+          -128,
+          -128
+         ]
+        },
+        "down": {
+         "uv": [
+          128,
+          128
+         ],
+         "uv_size": [
+          -128,
+          -128
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "name": "ring_2",
+     "parent": "root",
+     "pivot": [
+      0,
+      32,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -64,
+        32,
+        -64
+       ],
+       "size": [
+        128,
+        0,
+        128
+       ],
+       "uv": {
+        "up": {
+         "uv": [
+          128,
+          128
+         ],
+         "uv_size": [
+          -128,
+          -128
+         ]
+        },
+        "down": {
+         "uv": [
+          128,
+          128
+         ],
+         "uv_size": [
+          -128,
+          -128
+         ]
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

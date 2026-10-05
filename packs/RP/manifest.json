@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Improve Dragon (RP)",
+    "description": "Modelos, animaciones y part\u00edculas de Improve Dragon",
+    "uuid": "29ea5b25-6da5-49fc-891d-69f458ff4d56",
+    "version": [
+      2,
+      3,
+      2
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      50
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "fe88faa3-c8fd-4cd0-8c10-887a85f7ce0c",
+      "version": [
+        2,
+        3,
+        2
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "8c9de449-1cfc-4f97-871c-13a759afdfec",
+      "version": [
+        2,
+        3,
+        2
+      ]
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.rush_aura.start": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.4,
+   "bones": {
+    "shell": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.01,
+        0.01,
+        0.01
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.3": {
+       "post": [
+        1.15,
+        1.15,
+        1.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.4": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "inner": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.01,
+        0.01,
+        0.01
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.3": {
+       "post": [
+        1.15,
+        1.15,
+        1.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.4": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "trail": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.01,
+        0.01,
+        0.01
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.3": {
+       "post": [
+        1.15,
+        1.15,
+        1.15
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.4": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.rush_aura.loop": {
+   "loop": true,
+   "animation_length": 0.8,
+   "bones": {
+    "shell": {
+     "scale": {
+      "0.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.2": {
+       "post": [
+        1.08,
+        1.08,
+        1.08
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.4": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.6": {
+       "post": [
+        1.08,
+        1.08,
+        1.08
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.8": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "inner": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.8": [
+       0,
+       36,
+       0
+      ]
+     }
+    },
+    "trail": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.8": [
+       0,
+       0,
+       32
+      ]
+     }
+    },
+    "motes": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.8": [
+       0,
+       6,
+       48
+      ]
+     }
+    }
+   }
+  },
+  "animation.rush_aura.end": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.4,
+   "bones": {
+    "shell": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "inner": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "trail": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "motes": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    }
+   }
+  }
+ }
+}

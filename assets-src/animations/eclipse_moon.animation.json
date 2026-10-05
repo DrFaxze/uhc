@@ -1,0 +1,162 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.eclipse_moon.idle": {
+   "loop": true,
+   "animation_length": 4,
+   "bones": {
+    "core_white": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "4.0": [
+       0,
+       90,
+       0
+      ]
+     }
+    },
+    "dark": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "4.0": [
+       0,
+       90,
+       0
+      ]
+     }
+    },
+    "halo": {
+     "scale": {
+      "0.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.0": {
+       "post": [
+        1.08,
+        1.08,
+        1.08
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "2.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "3.0": {
+       "post": [
+        1.08,
+        1.08,
+        1.08
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "4.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "halo_dark": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "4.0": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    }
+   }
+  },
+  "animation.eclipse_moon.eclipse": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 1,
+   "bones": {
+    "core_white": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.8": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     },
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.8": [
+       10,
+       0,
+       0
+      ]
+     }
+    },
+    "halo": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.8": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "halo_dark": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "0.3": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "1.0": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  }
+ }
+}

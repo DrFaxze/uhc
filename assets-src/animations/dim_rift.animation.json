@@ -1,0 +1,854 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.dim_rift.variant_cave": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 1
+    },
+    "window_plains": {
+     "scale": 0.01
+    },
+    "window_ocean": {
+     "scale": 0.01
+    },
+    "window_night_forest": {
+     "scale": 0.01
+    },
+    "window_crimson_forest": {
+     "scale": 0.01
+    },
+    "window_basalt_delta": {
+     "scale": 0.01
+    },
+    "window_soulsand_valley": {
+     "scale": 0.01
+    },
+    "window_end_city": {
+     "scale": 0.01
+    },
+    "edge_green": {
+     "scale": 1
+    },
+    "dot_green": {
+     "scale": 1
+    },
+    "edge_red": {
+     "scale": 0.01
+    },
+    "dot_red": {
+     "scale": 0.01
+    },
+    "edge_purple": {
+     "scale": 0.01
+    },
+    "dot_purple": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.dim_rift.variant_plains": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 0.01
+    },
+    "window_plains": {
+     "scale": 1
+    },
+    "window_ocean": {
+     "scale": 0.01
+    },
+    "window_night_forest": {
+     "scale": 0.01
+    },
+    "window_crimson_forest": {
+     "scale": 0.01
+    },
+    "window_basalt_delta": {
+     "scale": 0.01
+    },
+    "window_soulsand_valley": {
+     "scale": 0.01
+    },
+    "window_end_city": {
+     "scale": 0.01
+    },
+    "edge_green": {
+     "scale": 1
+    },
+    "dot_green": {
+     "scale": 1
+    },
+    "edge_red": {
+     "scale": 0.01
+    },
+    "dot_red": {
+     "scale": 0.01
+    },
+    "edge_purple": {
+     "scale": 0.01
+    },
+    "dot_purple": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.dim_rift.variant_ocean": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 0.01
+    },
+    "window_plains": {
+     "scale": 0.01
+    },
+    "window_ocean": {
+     "scale": 1
+    },
+    "window_night_forest": {
+     "scale": 0.01
+    },
+    "window_crimson_forest": {
+     "scale": 0.01
+    },
+    "window_basalt_delta": {
+     "scale": 0.01
+    },
+    "window_soulsand_valley": {
+     "scale": 0.01
+    },
+    "window_end_city": {
+     "scale": 0.01
+    },
+    "edge_green": {
+     "scale": 1
+    },
+    "dot_green": {
+     "scale": 1
+    },
+    "edge_red": {
+     "scale": 0.01
+    },
+    "dot_red": {
+     "scale": 0.01
+    },
+    "edge_purple": {
+     "scale": 0.01
+    },
+    "dot_purple": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.dim_rift.variant_night_forest": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 0.01
+    },
+    "window_plains": {
+     "scale": 0.01
+    },
+    "window_ocean": {
+     "scale": 0.01
+    },
+    "window_night_forest": {
+     "scale": 1
+    },
+    "window_crimson_forest": {
+     "scale": 0.01
+    },
+    "window_basalt_delta": {
+     "scale": 0.01
+    },
+    "window_soulsand_valley": {
+     "scale": 0.01
+    },
+    "window_end_city": {
+     "scale": 0.01
+    },
+    "edge_green": {
+     "scale": 1
+    },
+    "dot_green": {
+     "scale": 1
+    },
+    "edge_red": {
+     "scale": 0.01
+    },
+    "dot_red": {
+     "scale": 0.01
+    },
+    "edge_purple": {
+     "scale": 0.01
+    },
+    "dot_purple": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.dim_rift.variant_crimson_forest": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 0.01
+    },
+    "window_plains": {
+     "scale": 0.01
+    },
+    "window_ocean": {
+     "scale": 0.01
+    },
+    "window_night_forest": {
+     "scale": 0.01
+    },
+    "window_crimson_forest": {
+     "scale": 1
+    },
+    "window_basalt_delta": {
+     "scale": 0.01
+    },
+    "window_soulsand_valley": {
+     "scale": 0.01
+    },
+    "window_end_city": {
+     "scale": 0.01
+    },
+    "edge_green": {
+     "scale": 0.01
+    },
+    "dot_green": {
+     "scale": 0.01
+    },
+    "edge_red": {
+     "scale": 1
+    },
+    "dot_red": {
+     "scale": 1
+    },
+    "edge_purple": {
+     "scale": 0.01
+    },
+    "dot_purple": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.dim_rift.variant_basalt_delta": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 0.01
+    },
+    "window_plains": {
+     "scale": 0.01
+    },
+    "window_ocean": {
+     "scale": 0.01
+    },
+    "window_night_forest": {
+     "scale": 0.01
+    },
+    "window_crimson_forest": {
+     "scale": 0.01
+    },
+    "window_basalt_delta": {
+     "scale": 1
+    },
+    "window_soulsand_valley": {
+     "scale": 0.01
+    },
+    "window_end_city": {
+     "scale": 0.01
+    },
+    "edge_green": {
+     "scale": 0.01
+    },
+    "dot_green": {
+     "scale": 0.01
+    },
+    "edge_red": {
+     "scale": 1
+    },
+    "dot_red": {
+     "scale": 1
+    },
+    "edge_purple": {
+     "scale": 0.01
+    },
+    "dot_purple": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.dim_rift.variant_soulsand_valley": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 0.01
+    },
+    "window_plains": {
+     "scale": 0.01
+    },
+    "window_ocean": {
+     "scale": 0.01
+    },
+    "window_night_forest": {
+     "scale": 0.01
+    },
+    "window_crimson_forest": {
+     "scale": 0.01
+    },
+    "window_basalt_delta": {
+     "scale": 0.01
+    },
+    "window_soulsand_valley": {
+     "scale": 1
+    },
+    "window_end_city": {
+     "scale": 0.01
+    },
+    "edge_green": {
+     "scale": 0.01
+    },
+    "dot_green": {
+     "scale": 0.01
+    },
+    "edge_red": {
+     "scale": 1
+    },
+    "dot_red": {
+     "scale": 1
+    },
+    "edge_purple": {
+     "scale": 0.01
+    },
+    "dot_purple": {
+     "scale": 0.01
+    }
+   }
+  },
+  "animation.dim_rift.variant_end_city": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.05,
+   "bones": {
+    "window_cave": {
+     "scale": 0.01
+    },
+    "window_plains": {
+     "scale": 0.01
+    },
+    "window_ocean": {
+     "scale": 0.01
+    },
+    "window_night_forest": {
+     "scale": 0.01
+    },
+    "window_crimson_forest": {
+     "scale": 0.01
+    },
+    "window_basalt_delta": {
+     "scale": 0.01
+    },
+    "window_soulsand_valley": {
+     "scale": 0.01
+    },
+    "window_end_city": {
+     "scale": 1
+    },
+    "edge_green": {
+     "scale": 0.01
+    },
+    "dot_green": {
+     "scale": 0.01
+    },
+    "edge_red": {
+     "scale": 0.01
+    },
+    "dot_red": {
+     "scale": 0.01
+    },
+    "edge_purple": {
+     "scale": 1
+    },
+    "dot_purple": {
+     "scale": 1
+    }
+   }
+  },
+  "animation.dim_rift.form1": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 1,
+   "bones": {
+    "body": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "0.6": [
+       0.45,
+       0.45,
+       1
+      ],
+      "1.0": [
+       0.4,
+       0.4,
+       1
+      ]
+     }
+    },
+    "dots": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "0.6": [
+       0.8,
+       0.8,
+       1
+      ],
+      "1.0": [
+       0.7,
+       0.7,
+       1
+      ]
+     }
+    },
+    "edges": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "0.6": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "1.0": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "windows": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "0.6": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "1.0": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    }
+   }
+  },
+  "animation.dim_rift.form2": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 1,
+   "bones": {
+    "body": {
+     "scale": {
+      "0.0": [
+       0.4,
+       0.4,
+       1
+      ],
+      "1.0": [
+       0.8,
+       0.8,
+       1
+      ]
+     }
+    },
+    "dots": {
+     "scale": {
+      "0.0": [
+       0.7,
+       0.7,
+       1
+      ],
+      "1.0": [
+       2.6,
+       2.6,
+       1
+      ]
+     }
+    },
+    "edges": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "1.0": [
+       0.8,
+       0.8,
+       1
+      ]
+     }
+    },
+    "windows": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "1.0": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    }
+   }
+  },
+  "animation.dim_rift.form3": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 1,
+   "bones": {
+    "body": {
+     "scale": {
+      "0.0": [
+       0.8,
+       0.8,
+       1
+      ],
+      "0.6": [
+       1.05,
+       1.05,
+       1
+      ],
+      "1.0": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "dots": {
+     "scale": {
+      "0.0": [
+       2.6,
+       2.6,
+       1
+      ],
+      "0.6": [
+       3.5,
+       3.5,
+       1
+      ],
+      "1.0": [
+       0.01,
+       0.01,
+       0.01
+      ]
+     }
+    },
+    "edges": {
+     "scale": {
+      "0.0": [
+       0.8,
+       0.8,
+       1
+      ],
+      "0.6": [
+       1.05,
+       1.05,
+       1
+      ],
+      "1.0": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "windows": {
+     "scale": {
+      "0.0": [
+       0.01,
+       0.01,
+       0.01
+      ],
+      "0.6": [
+       0.9,
+       0.9,
+       1
+      ],
+      "1.0": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.dim_rift.loop": {
+   "loop": true,
+   "animation_length": 2,
+   "bones": {
+    "edges": {
+     "scale": {
+      "0.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.5": {
+       "post": [
+        1.04,
+        1.04,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.5": {
+       "post": [
+        1.04,
+        1.04,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "2.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "debris": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "2.0": [
+       0,
+       0,
+       36
+      ]
+     }
+    },
+    "rift": {
+     "rotation": {
+      "0.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.0": {
+       "post": [
+        0,
+        0,
+        2
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "2.0": {
+       "post": [
+        0,
+        0,
+        0
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    }
+   }
+  },
+  "animation.dim_rift.hit": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.6,
+   "bones": {
+    "edges_dim": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.05": {
+       "pre": [
+        1,
+        1,
+        1
+       ],
+       "post": [
+        0.01,
+        0.01,
+        1
+       ]
+      },
+      "0.15": {
+       "pre": [
+        0.01,
+        0.01,
+        1
+       ],
+       "post": [
+        0.9,
+        0.9,
+        1
+       ]
+      },
+      "0.25": {
+       "pre": [
+        0.9,
+        0.9,
+        1
+       ],
+       "post": [
+        0.01,
+        0.01,
+        1
+       ]
+      },
+      "0.35": {
+       "pre": [
+        0.01,
+        0.01,
+        1
+       ],
+       "post": [
+        0.94,
+        0.94,
+        1
+       ]
+      }
+     }
+    },
+    "rift": {
+     "position": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "0.05": {
+       "pre": [
+        0,
+        0,
+        0
+       ],
+       "post": [
+        3,
+        0,
+        0
+       ]
+      },
+      "0.1": {
+       "pre": [
+        3,
+        0,
+        0
+       ],
+       "post": [
+        -3,
+        1,
+        0
+       ]
+      },
+      "0.15": {
+       "pre": [
+        -3,
+        1,
+        0
+       ],
+       "post": [
+        0,
+        0,
+        0
+       ]
+      }
+     }
+    }
+   }
+  },
+  "animation.dim_rift.break": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.6,
+   "bones": {
+    "rift": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.1": [
+       1.15,
+       1.15,
+       1
+      ],
+      "0.4": [
+       0.01,
+       0.01,
+       1
+      ]
+     }
+    },
+    "debris": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.6": [
+       2.4,
+       2.4,
+       2.4
+      ]
+     }
+    }
+   }
+  }
+ }
+}

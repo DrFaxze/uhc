@@ -1,0 +1,54 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Improve Dragon (BP)",
+    "description": "Rework del Ender Dragon portado de Improve Dragon 2.3.2 (Forge)",
+    "uuid": "8c9de449-1cfc-4f97-871c-13a759afdfec",
+    "version": [
+      2,
+      3,
+      2
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      50
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "ec64641d-1e94-4562-810f-1cc844cf8d1b",
+      "version": [
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "956e3f7a-d993-4cb2-ba4e-7945726c060e",
+      "version": [
+        2,
+        3,
+        2
+      ],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.10.0"
+    },
+    {
+      "uuid": "29ea5b25-6da5-49fc-891d-69f458ff4d56",
+      "version": [
+        2,
+        3,
+        2
+      ]
+    }
+  ]
+}

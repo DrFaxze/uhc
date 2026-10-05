@@ -1,0 +1,148 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.last_breath_radius.form": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 2,
+   "bones": {
+    "ring": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.05,
+        1,
+        0.05
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.6": {
+       "post": [
+        1.03,
+        1,
+        1.03
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "2.0": [
+       1,
+       1,
+       1
+      ]
+     }
+    },
+    "wall": {
+     "scale": {
+      "0.0": {
+       "post": [
+        0.05,
+        1,
+        0.05
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.6": {
+       "post": [
+        1.03,
+        1,
+        1.03
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "2.0": [
+       1,
+       1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "animation.last_breath_radius.loop": {
+   "loop": true,
+   "animation_length": 1.5,
+   "bones": {
+    "wall": {
+     "scale": {
+      "0.0": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "0.75": {
+       "post": [
+        1,
+        1.25,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      },
+      "1.5": {
+       "post": [
+        1,
+        1,
+        1
+       ],
+       "lerp_mode": "catmullrom"
+      }
+     }
+    },
+    "ring": {
+     "rotation": {
+      "0.0": [
+       0,
+       0,
+       0
+      ],
+      "1.5": [
+       0,
+       18,
+       0
+      ]
+     }
+    }
+   }
+  },
+  "animation.last_breath_radius.flare": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.6,
+   "bones": {
+    "wall": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.15": [
+       1,
+       2.2,
+       1
+      ],
+      "0.6": [
+       1.02,
+       0.01,
+       1.02
+      ]
+     }
+    },
+    "ring": {
+     "scale": {
+      "0.0": [
+       1,
+       1,
+       1
+      ],
+      "0.6": [
+       1.04,
+       1,
+       1.04
+      ]
+     }
+    }
+   }
+  }
+ }
+}
