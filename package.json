@@ -1,6 +1,6 @@
 {
   "name": "improvedragon-bedrock",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "private": true,
   "description": "Improve Dragon 2.3.2 portado a Minecraft Bedrock 26.50 (add-on)",
   "type": "module",

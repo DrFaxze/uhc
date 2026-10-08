@@ -204,24 +204,19 @@ export function registerCommands(): void {
           const look = V.of(who.getViewDirection()).flat().normalize();
           const side = new V(-look.z, 0, look.x);
           const base = V.of(who.location).add(look.scale(8));
-          const tests: [string, V][] = [
-            ['A', base.add(side.scale(-6))],
-            ['B', base],
-            ['C', base.add(side.scale(6))],
-          ];
-          for (const [label, at] of tests) {
+          const ids = ['v1', 'v2', 'v3', 'v4', 'v5'];
+          ids.forEach((v, i) => {
+            const at = base.add(side.scale((i - 2) * 6));
             try {
-              let e;
-              if (label === 'A') e = end().spawnEntity('improvedragon:debug_cube', at);
-              else if (label === 'B') e = end().spawnEntity('improvedragon:debug_circle', at);
-              else e = Effect.spawn('judgment_circle', at, 'spin', 0.25, 600).entity;
-              e.nameTag = `${label}`;
-              if (label !== 'C') system.runTimeout(() => e!.isValid && e!.remove(), 600);
+              const e = end().spawnEntity(`improvedragon:debug_${v}`, at);
+              e.nameTag = `${i + 1}`;
+              for (const k of ['sx', 'sy', 'sz']) e.setProperty(`improvedragon:${k}`, 1);
+              system.runTimeout(() => e.isValid && e.remove(), 600);
             } catch (err) {
-              say(`${label}: no se pudo crear (${err})`);
+              say(`${i + 1}: no se pudo crear (${err})`);
             }
-          }
-          say('Prueba creada delante (30 s): A = cubo magenta, B = anillo del Juicio sin animaciones, C = anillo del add-on. Dime cuáles ves.');
+          });
+          say('Prueba creada delante (30 s): 5 bloques de hielo (prisión de hielo) en fila, numerados 1-5 de izquierda a derecha. Dime cuáles ves.');
         });
         return ok('');
       },
