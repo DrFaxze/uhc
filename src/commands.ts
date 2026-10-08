@@ -10,6 +10,9 @@ import {
 import { castable } from './boss/abilities';
 import { Brain, brainOf, brains, DEBUG } from './boss/brain';
 import { end } from './core/world';
+import { Effect } from './fx/effect';
+import { MODELS } from './generated/models';
+import { V } from './util/vec';
 
 /** El dragón más cercano al que ejecuta el comando (o el primero que haya). */
 function dragon(origin: CustomCommandOrigin): Brain | null {
@@ -62,6 +65,7 @@ export function registerCommands(): void {
     const perm = CommandPermissionLevel.GameDirectors;
     reg.registerEnum('improvedragon:state', ['flight', 'center', 'physical']);
     reg.registerEnum('improvedragon:ability', castable());
+    reg.registerEnum('improvedragon:model', Object.keys(MODELS));
 
     reg.registerCommand({ name: 'improvedragon:info', description: 'Estado del dragón (fase, estado, habilidad, vida)', permissionLevel: perm }, (o) =>
       later(o, (b) => b.describe()),
@@ -144,6 +148,39 @@ export function registerCommands(): void {
         b.beginDeath();
         return 'Último Aliento';
       }),
+    );
+
+
+    reg.registerCommand(
+      {
+        name: 'improvedragon:fxtest',
+        description: 'Crea un efecto con modelo 6 bloques delante (diagnóstico)',
+        permissionLevel: perm,
+        mandatoryParameters: [{ name: 'improvedragon:model', type: CustomCommandParamType.Enum }],
+      },
+      (o, model: string) => {
+        system.run(() => {
+          const who = o.sourceEntity;
+          const say = (m: string) => {
+            try {
+              if (who && who.typeId === 'minecraft:player') (who as unknown as { sendMessage(m: string): void }).sendMessage(`§d[Improve Dragon]§r ${m}`);
+            } catch {
+              /* ignorar */
+            }
+          };
+          if (!who) return;
+          try {
+            const look = V.of(who.getViewDirection()).flat().normalize();
+            const at = V.of(who.location).add(look.scale(6)).add(0, 1, 0);
+            const info = MODELS[model];
+            const fx = Effect.spawn(model, at, info.anims.filter((_, i) => info.loops[i]).slice(0, 1).join('') || info.anims[0] || '', 0.25, 200);
+            say(`${model}: entidad ${fx.entity.typeId} creada en ${at} (válida: ${fx.valid}). Si no la ves, el fallo está en el paquete de recursos.`);
+          } catch (err) {
+            say(`${model}: no se pudo crear (${err}). El fallo está en el paquete de comportamiento.`);
+          }
+        });
+        return ok('');
+      },
     );
 
     reg.registerCommand(

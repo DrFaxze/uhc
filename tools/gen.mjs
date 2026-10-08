@@ -1,3 +1,4 @@
+// Los archivos de cliente van en la raíz de cada carpeta (sin subcarpetas): Bedrock no siempre las recorre.
 // Genera los packs completos en build/BP y build/RP:
 //  - copia los archivos escritos a mano de packs/BP y packs/RP;
 //  - convierte cada modelo de assets-src (formato Bedrock que usaba GeckoLib) en una entidad de efecto
@@ -94,7 +95,7 @@ for (const name of models) {
   g.description.visible_bounds_width = bound;
   g.description.visible_bounds_height = bound;
   g.description.visible_bounds_offset = [0, 0, 0];
-  write(path.join(RP, 'models', 'entity', NS, `${name}.geo.json`), geo);
+  write(path.join(RP, 'models', 'entity', `${NS}_${name}.geo.json`), geo);
 
   // --- Animaciones: se renombran y se guardan nombres y duraciones para el script.
   const anim = readJson(path.join(SRC, 'animations', `${name}.animation.json`));
@@ -109,7 +110,7 @@ for (const name of models) {
     loops.push(a.loop === true);
     renamed[`animation.${NS}.${name}.${short}`] = a;
   }
-  write(path.join(RP, 'animations', NS, `${name}.animation.json`), { format_version: '1.8.0', animations: renamed });
+  write(path.join(RP, 'animations', `${NS}_${name}.animation.json`), { format_version: '1.8.0', animations: renamed });
 
   // --- Textura (las animadas con .mcmeta usan uv_anim en el render controller).
   const tex = path.join(SRC, 'textures', `${name}.png`);
@@ -142,7 +143,7 @@ for (const name of models) {
     controllers[id] = { initial_state: 'default', states };
     clientAnims[`slot${slot}`] = id;
   }
-  write(path.join(RP, 'animation_controllers', NS, `${name}.ac.json`), {
+  write(path.join(RP, 'animation_controllers', `${NS}_${name}.animation_controllers.json`), {
     format_version: '1.10.0',
     animation_controllers: controllers,
   });
@@ -159,12 +160,12 @@ for (const name of models) {
       scale: [1, `1 / ${frames}`],
     };
   }
-  write(path.join(RP, 'render_controllers', NS, `${name}.rc.json`), {
+  write(path.join(RP, 'render_controllers', `${NS}_${name}.render_controllers.json`), {
     format_version: '1.10.0',
     render_controllers: { [`controller.render.${NS}.${name}`]: rc },
   });
 
-  write(path.join(RP, 'entity', NS, `${name}.entity.json`), {
+  write(path.join(RP, 'entity', `${NS}_${name}.entity.json`), {
     format_version: '1.10.0',
     'minecraft:client_entity': {
       description: {
@@ -220,7 +221,7 @@ for (const name of models) {
 }
 
 // Animación común que orienta y escala el hueso raíz.
-write(path.join(RP, 'animations', NS, 'fx_aim.animation.json'), {
+write(path.join(RP, 'animations', `${NS}_fx_aim.animation.json`), {
   format_version: '1.8.0',
   animations: {
     [`animation.${NS}.fx_aim`]: {

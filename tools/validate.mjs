@@ -75,7 +75,7 @@ if (!fs.existsSync(path.join(BP, 'scripts', 'main.js'))) errors.push('falta buil
 
 // Modelos citados desde el código del script.
 const models = new Set(
-  [...walk(path.join(RP, 'entity'))].map((f) => path.basename(f).replace('.entity.json', '')),
+  [...walk(path.join(RP, 'entity'))].map((f) => path.basename(f).replace('.entity.json', '').replace(/^improvedragon_/, '')),
 );
 for (const f of walk(path.join(ROOT, 'src')).filter((f) => f.endsWith('.ts') && !f.includes('generated'))) {
   const src = fs.readFileSync(f, 'utf8');
