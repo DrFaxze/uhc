@@ -1,0 +1,20 @@
+{
+ "format_version": "1.10.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "improvedragon:debug_circle",
+   "materials": {
+    "default": "entity_alphablend"
+   },
+   "textures": {
+    "default": "textures/entity/improvedragon/judgment_circle"
+   },
+   "geometry": {
+    "default": "geometry.improvedragon.debug_circle"
+   },
+   "render_controllers": [
+    "controller.render.default"
+   ]
+  }
+ }
+}

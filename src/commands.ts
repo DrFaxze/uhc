@@ -183,6 +183,50 @@ export function registerCommands(): void {
       },
     );
 
+
+    reg.registerCommand(
+      {
+        name: 'improvedragon:rendertest',
+        description: 'Prueba de dibujo: cubo mínimo, anillo sin animaciones y anillo del add-on (diagnóstico)',
+        permissionLevel: perm,
+      },
+      (o) => {
+        system.run(() => {
+          const who = o.sourceEntity;
+          if (!who) return;
+          const say = (m: string) => {
+            try {
+              if (who.typeId === 'minecraft:player') (who as unknown as { sendMessage(m: string): void }).sendMessage(`§d[Improve Dragon]§r ${m}`);
+            } catch {
+              /* ignorar */
+            }
+          };
+          const look = V.of(who.getViewDirection()).flat().normalize();
+          const side = new V(-look.z, 0, look.x);
+          const base = V.of(who.location).add(look.scale(8));
+          const tests: [string, V][] = [
+            ['A', base.add(side.scale(-6))],
+            ['B', base],
+            ['C', base.add(side.scale(6))],
+          ];
+          for (const [label, at] of tests) {
+            try {
+              let e;
+              if (label === 'A') e = end().spawnEntity('improvedragon:debug_cube', at);
+              else if (label === 'B') e = end().spawnEntity('improvedragon:debug_circle', at);
+              else e = Effect.spawn('judgment_circle', at, 'spin', 0.25, 600).entity;
+              e.nameTag = `${label}`;
+              if (label !== 'C') system.runTimeout(() => e!.isValid && e!.remove(), 600);
+            } catch (err) {
+              say(`${label}: no se pudo crear (${err})`);
+            }
+          }
+          say('Prueba creada delante (30 s): A = cubo magenta, B = anillo del Juicio sin animaciones, C = anillo del add-on. Dime cuáles ves.');
+        });
+        return ok('');
+      },
+    );
+
     reg.registerCommand(
       {
         name: 'improvedragon:debug',
