@@ -190,7 +190,6 @@ for (const name of models) {
   props[`${NS}:dy`] = { type: 'float', range: [-500, 500], default: 0, client_sync: true };
   const components = {
     'minecraft:physics': { has_gravity: false, has_collision: false },
-    'minecraft:pushable': { is_pushable: false, is_pushable_by_piston: false },
     'minecraft:knockback_resistance': { value: 1 },
     'minecraft:fire_immune': {},
     'minecraft:collision_box': { width: 0.2, height: 0.2 },

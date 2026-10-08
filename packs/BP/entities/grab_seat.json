@@ -34,10 +34,6 @@
      "deals_damage": "no"
     }
    },
-   "minecraft:pushable": {
-    "is_pushable": false,
-    "is_pushable_by_piston": false
-   },
    "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
