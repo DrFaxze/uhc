@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Improve Dragon 2.4.3 (BP)",
+    "name": "Improve Dragon 2.4.4 (BP)",
     "description": "Rework del Ender Dragon portado de Improve Dragon 2.3.2 (Forge)",
     "uuid": "8c9de449-1cfc-4f97-871c-13a759afdfec",
     "version": [
       2,
       4,
-      3
+      4
     ],
     "min_engine_version": [
       1,
@@ -22,7 +22,7 @@
       "version": [
         2,
         4,
-        3
+        4
       ]
     },
     {
@@ -32,7 +32,7 @@
       "version": [
         2,
         4,
-        3
+        4
       ],
       "entry": "scripts/main.js"
     }
@@ -47,7 +47,7 @@
       "version": [
         2,
         4,
-        3
+        4
       ]
     }
   ]

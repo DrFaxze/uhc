@@ -186,9 +186,11 @@ for (const name of models) {
   for (let slot = 0; slot < 3; slot++) {
     props[`${NS}:a${slot}`] = { type: 'int', range: [-1, Math.max(0, anims.length - 1)], default: -1, client_sync: true };
   }
-  props[`${NS}:pitch`] = { type: 'float', range: [-180, 180], default: 0, client_sync: true };
-  for (const k of ['sx', 'sy', 'sz']) props[`${NS}:${k}`] = { type: 'float', range: [0, 2000], default: 1, client_sync: true };
-  props[`${NS}:dy`] = { type: 'float', range: [-500, 500], default: 0, client_sync: true };
+  // Enteros en coma fija (valor × 100): las propiedades float no llegan bien al cliente y el modelo
+  // quedaba con escala 0 (invisible).
+  props[`${NS}:pitch`] = { type: 'int', range: [-18000, 18000], default: 0, client_sync: true };
+  for (const k of ['sx', 'sy', 'sz']) props[`${NS}:${k}`] = { type: 'int', range: [0, 200000], default: 100, client_sync: true };
+  props[`${NS}:dy`] = { type: 'int', range: [-50000, 50000], default: 0, client_sync: true };
   const components = {
     'minecraft:physics': { has_gravity: false, has_collision: false },
     'minecraft:knockback_resistance': { value: 1 },
@@ -228,9 +230,9 @@ write(path.join(RP, 'animations', `${NS}_fx_aim.animation.json`), {
       loop: true,
       bones: {
         idfx_aim: {
-          rotation: [prop('pitch'), 0, 0],
-          position: [0, `${prop('dy')} * 16`, 0],
-          scale: [prop('sx'), prop('sy'), prop('sz')],
+          rotation: [`${prop('pitch')} / 100`, 0, 0],
+          position: [0, `${prop('dy')} * 0.16`, 0],
+          scale: [`${prop('sx')} / 100`, `${prop('sy')} / 100`, `${prop('sz')} / 100`],
         },
       },
     },
@@ -253,34 +255,5 @@ for (const file of ['en_US.lang', 'es_ES.lang']) {
   write(p, base + (base.endsWith('\n') || !base ? '' : '\n') + lang.join('\n') + '\n');
 }
 
-
-// --- Variantes de diagnóstico (/improvedragon:rendertest): el mismo modelo quitando una pieza cada vez.
-{
-  const base = 'ice_prison';
-  const bp = readJson(path.join(BP, 'entities', NS, `${base}.json`));
-  const ce = readJson(path.join(RP, 'entity', `${NS}_${base}.entity.json`));
-  const variants = {
-    // V1: igual que el add-on
-    v1: { bp: (c) => c, client: (d) => d },
-    // V2: sin la caja de golpe vacía ni la optimización de red
-    v2: { bp: (c) => { delete c['minecraft:custom_hit_test']; delete c['minecraft:conditional_bandwidth_optimization']; return c; }, client: (d) => d },
-    // V3: sin el hueso raíz animado (solo controladores de ranura)
-    v3: { bp: (c) => c, client: (d) => { d.scripts.animate = ['slot0', 'slot1', 'slot2']; return d; } },
-    // V4: sin controladores de ranura (solo el hueso raíz)
-    v4: { bp: (c) => c, client: (d) => { d.scripts.animate = ['aim']; return d; } },
-    // V5: sin animaciones y con el render controller por defecto
-    v5: { bp: (c) => c, client: (d) => { delete d.scripts; delete d.animations; d.render_controllers = ['controller.render.default']; return d; } },
-  };
-  for (const [v, f] of Object.entries(variants)) {
-    const b = JSON.parse(JSON.stringify(bp));
-    b['minecraft:entity'].description.identifier = `${NS}:debug_${v}`;
-    b['minecraft:entity'].components = f.bp(b['minecraft:entity'].components);
-    write(path.join(BP, 'entities', NS, `debug_${v}.json`), b);
-    const c = JSON.parse(JSON.stringify(ce));
-    c['minecraft:client_entity'].description.identifier = `${NS}:debug_${v}`;
-    c['minecraft:client_entity'].description = f.client(c['minecraft:client_entity'].description);
-    write(path.join(RP, 'entity', `${NS}_debug_${v}.entity.json`), c);
-  }
-}
 
 console.log(`gen: ${models.length} modelos -> ${path.relative(ROOT, OUT)}`);

@@ -272,14 +272,16 @@ export class Effect {
         const sx = this.scaleV;
         const sy = this.lengthV > 0 ? this.scaleV : this.scaleYV > 0 ? this.scaleYV : this.scaleV;
         const sz = this.lengthV > 0 ? this.lengthV / 32 : this.scaleZV > 0 ? this.scaleZV : this.scaleV;
-        this.entity.setProperty(`${NS}:sx`, Math.min(2000, sx));
-        this.entity.setProperty(`${NS}:sy`, Math.min(2000, sy));
-        this.entity.setProperty(`${NS}:sz`, Math.min(2000, sz));
-        this.entity.setProperty(`${NS}:dy`, Math.max(-500, Math.min(500, this.dyV)));
+        // Enteros en coma fija (× 100), ver tools/gen.mjs.
+        const fixed = (x: number, lo: number, hi: number) => Math.round(Math.max(lo, Math.min(hi, x)) * 100);
+        this.entity.setProperty(`${NS}:sx`, fixed(sx, 0, 2000));
+        this.entity.setProperty(`${NS}:sy`, fixed(sy, 0, 2000));
+        this.entity.setProperty(`${NS}:sz`, fixed(sz, 0, 2000));
+        this.entity.setProperty(`${NS}:dy`, fixed(this.dyV, -500, 500));
         this.dirtyScale = false;
       }
       if (this.dirtyRot) {
-        this.entity.setProperty(`${NS}:pitch`, Math.max(-180, Math.min(180, this.aimPitchDeg)));
+        this.entity.setProperty(`${NS}:pitch`, Math.round(Math.max(-180, Math.min(180, this.aimPitchDeg)) * 100));
         this.entity.setRotation({ x: 0, y: this.bedrockYaw() });
         this.dirtyRot = false;
       }

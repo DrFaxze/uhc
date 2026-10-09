@@ -187,7 +187,7 @@ export function registerCommands(): void {
     reg.registerCommand(
       {
         name: 'improvedragon:rendertest',
-        description: 'Prueba de dibujo: cubo mínimo, anillo sin animaciones y anillo del add-on (diagnóstico)',
+        description: 'Prueba de dibujo de los modelos (diagnóstico)',
         permissionLevel: perm,
       },
       (o) => {
@@ -204,19 +204,21 @@ export function registerCommands(): void {
           const look = V.of(who.getViewDirection()).flat().normalize();
           const side = new V(-look.z, 0, look.x);
           const base = V.of(who.location).add(look.scale(8));
-          const ids = ['v1', 'v2', 'v3', 'v4', 'v5'];
-          ids.forEach((v, i) => {
-            const at = base.add(side.scale((i - 2) * 6));
+          const tests: [string, (at: V) => Entity][] = [
+            ['1', (at) => end().spawnEntity('improvedragon:debug_cube', at)],
+            ['2', (at) => Effect.spawn('ice_prison', at, 'freeze>loop', 1, 600).entity],
+            ['3', (at) => Effect.spawn('judgment_circle', at.add(0, 0.5, 0), 'charge>spin|pulse', 0.25, 600).entity],
+          ];
+          tests.forEach(([label, make], i) => {
             try {
-              const e = end().spawnEntity(`improvedragon:debug_${v}`, at);
-              e.nameTag = `${i + 1}`;
-              for (const k of ['sx', 'sy', 'sz']) e.setProperty(`improvedragon:${k}`, 1);
-              system.runTimeout(() => e.isValid && e.remove(), 600);
+              const e = make(base.add(side.scale((i - 1) * 7)));
+              e.nameTag = label;
+              if (label === '1') system.runTimeout(() => e.isValid && e.remove(), 600);
             } catch (err) {
-              say(`${i + 1}: no se pudo crear (${err})`);
+              say(`${label}: no se pudo crear (${err})`);
             }
           });
-          say('Prueba creada delante (30 s): 5 bloques de hielo (prisión de hielo) en fila, numerados 1-5 de izquierda a derecha. Dime cuáles ves.');
+          say('Prueba creada delante (30 s), de izquierda a derecha: 1 = cubo magenta, 2 = prisión de hielo animada, 3 = anillo del Juicio pequeño girando.');
         });
         return ok('');
       },

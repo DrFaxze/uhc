@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Improve Dragon 2.4.3 (RP)",
+    "name": "Improve Dragon 2.4.4 (RP)",
     "description": "Modelos, animaciones y part\u00edculas de Improve Dragon",
     "uuid": "29ea5b25-6da5-49fc-891d-69f458ff4d56",
     "version": [
       2,
       4,
-      3
+      4
     ],
     "min_engine_version": [
       1,
@@ -22,7 +22,7 @@
       "version": [
         2,
         4,
-        3
+        4
       ]
     }
   ],
@@ -32,7 +32,7 @@
       "version": [
         2,
         4,
-        3
+        4
       ]
     }
   ]
